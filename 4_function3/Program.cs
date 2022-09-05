@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _4_function3
 {
@@ -11,11 +11,16 @@ namespace _4_function3
             bool canExitApp = true;
             bool result;
 
-            Console.Write("Введите число: ");
+            Console.Write("Введите номер: ");
             numberInput = Console.ReadLine();
 
             result = int.TryParse(numberInput, out number);
 
+            ConvertNumber(numberInput, number, result, canExitApp);
+        }
+
+        static int ConvertNumber(string numberInput, int number, bool result, bool canExitApp)
+        {
             while (canExitApp)
             {
                 if (result)
@@ -31,6 +36,8 @@ namespace _4_function3
                     result = int.TryParse(numberInput, out number);
                 }
             }
+
+            return number;
         }
     }
-}       
+}
