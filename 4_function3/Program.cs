@@ -20,7 +20,7 @@ namespace _4_function3
             {
                 if (result)
                 {
-                    Console.Write($"Число успешно сконвертировано! - {number}");
+                    Console.Write($"Число - {number}, успешно сконвертировано!");
                     canExitApp = false;
                 }
                 else
