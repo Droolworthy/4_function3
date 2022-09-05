@@ -16,11 +16,13 @@ namespace _4_function3
 
             result = int.TryParse(numberInput, out number);
 
-            ConvertNumber(numberInput, number, result, canExitApp);
+            ConvertNumber(number, result, canExitApp);
         }
 
-        static int ConvertNumber(string numberInput, int number, bool result, bool canExitApp)
+        static int ConvertNumber(int number, bool result, bool canExitApp)
         {
+            string numberInput;
+
             while (canExitApp)
             {
                 if (result)
