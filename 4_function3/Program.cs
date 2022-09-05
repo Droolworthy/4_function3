@@ -11,7 +11,7 @@ namespace _4_function3
             bool canExitApp = true;
             bool result;
 
-            Console.Write("Введите номер: ");
+            Console.Write("Введите число: ");
             numberInput = Console.ReadLine();
 
             result = int.TryParse(numberInput, out number);
