@@ -25,7 +25,7 @@ namespace _4_function3
                 }
                 else
                 {
-                    Console.WriteLine("Не удалось сконвертировать число, попробуйте ещё раз.");
+                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");
                     Console.Write("Ввод: ");
                     numberInput = Console.ReadLine();
                     result = int.TryParse(numberInput, out number);
