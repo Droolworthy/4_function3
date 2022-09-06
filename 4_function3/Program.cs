@@ -13,22 +13,21 @@ namespace _4_function3
         {
             string numberInput;
             int number;
-            bool canExitApp = true;
-            bool isResultReadInt = true;
+            bool canExitMethod = true;
 
             Console.Write("Введите число: ");
             numberInput = Console.ReadLine();
 
-            isResultReadInt = int.TryParse(numberInput, out number);
+            bool isResultReadInt = int.TryParse(numberInput, out number);
 
-            while (canExitApp)
+            while (canExitMethod)
             {
                 if (isResultReadInt)
                 {
                     Console.Write($"Число - {number}, успешно сконвертировано!");
-                    canExitApp = false;
+                    return number;
                 }
-                else
+                else 
                 {
                     Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");
                     Console.Write("Введите число: ");
