@@ -28,8 +28,7 @@ namespace _4_function3
                 }
                 else 
                 {
-                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");                   
-                    isResultReadInt = int.TryParse(numberInput, out number);
+                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");                                      
                 }
             }            
         }
