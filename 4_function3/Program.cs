@@ -16,10 +16,10 @@ namespace _4_function3
 
             result = int.TryParse(numberInput, out number);
 
-            ConvertNumber(number, result, canExitApp);
+            ReadInt(number, result, canExitApp);
         }
 
-        static int ConvertNumber(int number, bool result, bool canExitApp)
+        static int ReadInt(int number, bool result, bool canExitApp)
         {
             string numberInput;
 
