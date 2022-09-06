@@ -9,14 +9,14 @@ namespace _4_function3
             string numberInput;
             int number;
             bool canExitApp = true;
-            bool result;
+            bool isResultReadInt;
 
             Console.Write("Введите номер: ");
             numberInput = Console.ReadLine();
 
-            result = int.TryParse(numberInput, out number);
+            isResultReadInt = int.TryParse(numberInput, out number);
 
-            ReadInt(number, result, canExitApp);
+            ReadInt(number, isResultReadInt, canExitApp);
         }
 
         static int ReadInt(int number, bool result, bool canExitApp)
