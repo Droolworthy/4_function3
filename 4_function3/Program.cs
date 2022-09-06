@@ -5,16 +5,17 @@ namespace _4_function3
     internal class Program
     {
         static void Main(string[] args)
-        {            
+        {
             ReadInt();
         }
 
         static int ReadInt()
         {
             string numberInput;
-            int number;
+            int number = 0;
+            bool canExitMethod = true;
 
-            while (true)
+            while (canExitMethod)
             {
                 Console.Write("Введите число: ");
                 numberInput = Console.ReadLine();
@@ -24,13 +25,14 @@ namespace _4_function3
                 if (isResultReadInt)
                 {
                     Console.Write($"Число - {number}, успешно сконвертировано!");
-                    return number;
+                    canExitMethod = false;
                 }
-                else 
+                else
                 {
-                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");                                      
+                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");
                 }
-            }            
+            }
+            return number;
         }
     }
 }
