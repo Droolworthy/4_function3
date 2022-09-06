@@ -5,27 +5,25 @@ namespace _4_function3
     internal class Program
     {
         static void Main(string[] args)
+        {            
+            ReadInt();
+        }
+
+        static int ReadInt()
         {
             string numberInput;
             int number;
             bool canExitApp = true;
-            bool isResultReadInt;
+            bool isResultReadInt = true;
 
-            Console.Write("Введите номер: ");
+            Console.Write("Введите число: ");
             numberInput = Console.ReadLine();
 
             isResultReadInt = int.TryParse(numberInput, out number);
 
-            ReadInt(number, isResultReadInt, canExitApp);
-        }
-
-        static int ReadInt(int number, bool result, bool canExitApp)
-        {
-            string numberInput;
-
             while (canExitApp)
             {
-                if (result)
+                if (isResultReadInt)
                 {
                     Console.Write($"Число - {number}, успешно сконвертировано!");
                     canExitApp = false;
@@ -33,9 +31,9 @@ namespace _4_function3
                 else
                 {
                     Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");
-                    Console.Write("Ввод: ");
+                    Console.Write("Введите число: ");
                     numberInput = Console.ReadLine();
-                    result = int.TryParse(numberInput, out number);
+                    isResultReadInt = int.TryParse(numberInput, out number);
                 }
             }
 
