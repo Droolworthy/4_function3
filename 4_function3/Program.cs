@@ -13,15 +13,14 @@ namespace _4_function3
         {
             string numberInput;
             int number;
-            bool canExitMethod = true;
 
-            Console.Write("Введите число: ");
-            numberInput = Console.ReadLine();
-
-            bool isResultReadInt = int.TryParse(numberInput, out number);
-
-            while (canExitMethod)
+            while (true)
             {
+                Console.Write("Введите число: ");
+                numberInput = Console.ReadLine();
+
+                bool isResultReadInt = int.TryParse(numberInput, out number);
+
                 if (isResultReadInt)
                 {
                     Console.Write($"Число - {number}, успешно сконвертировано!");
@@ -29,14 +28,10 @@ namespace _4_function3
                 }
                 else 
                 {
-                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");
-                    Console.Write("Введите число: ");
-                    numberInput = Console.ReadLine();
+                    Console.WriteLine($"Не удалось сконвертировать {number}, попробуйте ещё раз.");                   
                     isResultReadInt = int.TryParse(numberInput, out number);
                 }
-            }
-
-            return number;
+            }            
         }
     }
 }
